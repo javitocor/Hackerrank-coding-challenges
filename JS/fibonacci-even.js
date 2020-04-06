@@ -4,6 +4,7 @@ function fibonacci_even(number){
     var count2 = 2;
     for (var i = 1; i <= number; i++){
         count = arr[i] + arr[i-1];
+        arr.push(count);
         if (count % 2 == 0){
             count2 += count;
         }

@@ -9,6 +9,7 @@ function anagram(s) {
             for (var j=0; j<second.length;j++){
                 if (first[i]===second[j]){
                     count++;
+                    second= second.replace(second[j],"");
                     break;
                 }
             }
