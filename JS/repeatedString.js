@@ -17,7 +17,7 @@ function repeatedString(s, n) {
 
 function repeatedString(s, n) {
     if (s === "a"){
-        return n
+        return n;
     } else if (!s.includes("a")) {
         return 0;
     }
