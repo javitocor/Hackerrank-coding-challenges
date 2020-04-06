@@ -15,11 +15,24 @@ function repeatedString(s, n) {
 }
 
 
-
-
-
- while (n > 0) { 
-        repeatedString += s; 
-        n--; 
+function repeatedString(s, n) {
+    if (s === "a"){
+        return n
+    } else if (!s.includes("a")) {
+        return 0;
     }
-
+    else {     
+        var arr = s.match(/a/g);
+        var count = arr.length;    
+        var x = count * Math.floor(n/s.length);
+        var str = s.slice(0, n % s.length);
+        var arr2 = str.match(/a/g);
+        if (arr2 == null){
+            return x;
+        }else {
+            var count2  = arr2.length;
+            var total = x + count2;
+            return total;
+        }
+    }
+}
