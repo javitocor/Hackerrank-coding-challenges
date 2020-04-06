@@ -12,5 +12,3 @@ function fibonacci_even(number){
     return count2;
 }
 
-console.log(fibonacci_even(4));
-
