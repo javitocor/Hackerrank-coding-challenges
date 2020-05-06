@@ -32,6 +32,7 @@ function palindromeIndex(s) {
                     var str_reverse = str.split("").reverse().join("");
                     if (str == str_reverse){
                         return s.length - i - 1;
+                        break;
                     }
                 }
             }
