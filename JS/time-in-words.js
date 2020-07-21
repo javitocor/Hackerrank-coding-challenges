@@ -1,11 +1,10 @@
 function timeInWords(h, m) {
-    var ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
+    let ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
               'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
               'seventeen', 'eighteen', 'nineteen'];
-    var tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty'];
-    var hour = h.toString();
-    var minute = m.toString();
-
+    let tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty'];
+    let hour = h.toString();
+    let minute = m.toString();
     if ( m === 0 ) {
         return ones[h] + " o' clock";
     }
@@ -35,6 +34,7 @@ function timeInWords(h, m) {
         if (m < 20){
             return ones[m] + " minutes to " + ones[h+1];
         } else if (m >= 20 && m < 30){
+            minute = m.toString();
             return tens[minute[0]] + " " + ones[minute[1]] + " minutes to " + ones[h+1];
         }
     }
